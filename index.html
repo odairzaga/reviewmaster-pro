@@ -418,30 +418,36 @@
             <h3 class="modal-title">Comece Sua Transformação Hoje!</h3>
             <p class="modal-subtitle">Preencha os dados abaixo e receba acesso ao teste gratuito de 7 dias</p>
             
-            <form onsubmit="enviarFormulario(event)">
+            <form action="https://formsubmit.co/leads@reviewmasterpro.tech" method="POST">
+                <!-- Configurações FormSubmit -->
+                <input type="hidden" name="_subject" value="Novo Lead - ReviewMaster Pro">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="https://reviewmasterpro.tech?success=true">
+                
                 <div class="form-group">
                     <label class="form-label">Nome Completo *</label>
-                    <input type="text" class="form-input" placeholder="Seu nome completo" required>
+                    <input type="text" name="nome" class="form-input" placeholder="Seu nome completo" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Email Profissional *</label>
-                    <input type="email" class="form-input" placeholder="seu@email.com" required>
+                    <input type="email" name="email" class="form-input" placeholder="seu@email.com" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">WhatsApp *</label>
-                    <input type="tel" class="form-input" placeholder="+55 (11) 99999-9999" required>
+                    <input type="tel" name="whatsapp" class="form-input" placeholder="+55 (11) 99999-9999" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Empresa/Loja *</label>
-                    <input type="text" class="form-input" placeholder="Nome da sua empresa" required>
+                    <input type="text" name="empresa" class="form-input" placeholder="Nome da sua empresa" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Principal Marketplace *</label>
-                    <select class="form-select" required>
+                    <select name="marketplace" class="form-select" required>
                         <option value="">Selecione...</option>
                         <option value="amazon">Amazon</option>
                         <option value="mercadolivre">Mercado Livre</option>
@@ -454,7 +460,7 @@
                 </div>
                 
                 <button type="submit" class="submit-btn">
-                    🚀 Quero Meu Teste Grátis Agora!
+                    Enviar Solicitação
                 </button>
             </form>
         </div>
